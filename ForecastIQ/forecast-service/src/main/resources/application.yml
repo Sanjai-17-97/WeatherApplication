@@ -1,0 +1,44 @@
+server:
+  port: 8086
+
+#spring properties
+spring:
+  #application
+  application:
+    name: FORECAST_SERVICE
+  #h2 database
+#  h2:
+#    console:
+#      enabled: true
+#  sql:
+#    init:
+#      platform: h2
+#  datasource:
+#    url: jdbc:h2:mem:forecast
+
+  #SQL database
+  datasource:
+    url: jdbc:mysql://sanjay-db.cxsqum8mcgdf.us-west-2.rds.amazonaws.com:3306/sanjay-db?createDatabaseIfNotExist=true
+    username: admin
+    password: admin123
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto=update: update
+
+
+  #  config:
+  #    import: "optional:configserver:http://localhost:9023/"
+
+
+
+
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka/
+
+
+
+

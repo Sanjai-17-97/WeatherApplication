@@ -1,0 +1,37 @@
+server:
+  port: 9191
+
+spring:
+  application:
+    name: API_GATEWAY
+
+#routes for user_service
+  cloud:
+    gateway:
+      routes:
+        - id: USER_SERVICE
+          uri: http://localhost:8080
+          predicates:
+           - Path=/api/profile/**
+        - id: AUTH_SERVICE
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/auth/**
+        - id: FORECAST_SERVICE
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/forecast/**
+        - id: Wishlist-Service
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/**
+
+
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka/
+
+
+

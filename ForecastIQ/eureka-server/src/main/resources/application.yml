@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: EUREKA_SERVER
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:9090/eureka/

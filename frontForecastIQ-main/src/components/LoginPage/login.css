@@ -1,0 +1,18 @@
+.nav-title{
+    margin-left: 20px;
+    text-align: justify;
+    text-size-adjust: 30px;
+}
+.navbar-brand{
+    margin-left: 20px;
+}
+.btn-outline-success{
+    margin-right: 30px;
+}
+.ftr-container{
+    border-top: 10px;
+    max-height: min-content;
+}
+.footer-text{
+    text-align: center;
+}
